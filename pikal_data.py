@@ -16,7 +16,7 @@ product_number=int(index_data)/32+1
 def pikel_data():
     number=1
     pikal_list=[] 
-    url_data_store="pikal"+str(number)+".json"
+    url_data_store="pikal_data_files/"+"pikal"+str(number)+".json"
     filepath=pathlib.Path(url_data_store)
     if filepath.exists():
         with open(url_data_store,"r") as json_data:
@@ -46,11 +46,9 @@ def pikel_data():
                 number=number+1
                 pikal_list.append(pikal_dic)
 
-                url_data_store="pikal"+str(number-1)+".json"
+                url_data_store="pikal_data_files/"+"pikal"+str(number-1)+".json"
                 with open(url_data_store,"w") as data:
                     data.write(json.dumps(pikal_dic))
         return pikal_list
 
 pprint(pikel_data())
-
-#p9oiutrw
