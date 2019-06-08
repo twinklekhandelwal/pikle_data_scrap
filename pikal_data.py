@@ -50,5 +50,5 @@ def pikel_data():
                 with open(url_data_store,"w") as data:
                     data.write(json.dumps(pikal_dic))
         return pikal_list
-
+#fsuidua;do
 pprint(pikel_data())
